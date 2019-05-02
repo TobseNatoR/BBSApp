@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -39,43 +39,20 @@
         {
             initJava();
         }
-
-        //Kleines Script um Kontakte auszulesen
-        /*
-        function init() {
-            var filter = ["displayName","name"];
-            navigator.contacts.find(filter, gotContacts, errorHandler);
-        }
-
-        function errorHandler(e) {
-            console.log("errorHandler: "+e);
-        }
-
-        function gotContacts(c) {
-            console.log("gotContacts, number of results "+c.length);
-            for(var i=0, len=c.length; i<len; i++) {
-                console.log(c[i].name.formatted);
-            }
-        }
-        */
-
     </script>
 </head>
 
 <!-- Alle Java Funktionen initialisieren -->
 <body onload="onLoad()">
-
     <!-- Startseite Page -->
     <div data-role="page" id="startseite" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
             <a href="#startseite" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
-            <a href="#adressbuch" class="btn-primary" data-role="button" id="timerButton" data-icon="">Adressbuch</a>
-            <a href="#arbeitszeit" class="btn-primary" data-role="button" id="timerButton" data-icon="">Arbeitszeit stoppen</a>
-            <a href="#menu-panel" data-role="button" class="close" data-icon="remove">Schließen</a>
+            <a href="#test" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">test</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
-            <div class="logo">GFI <span class="logo-highlight">A</span>pp</div>
+            <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
         </div>
         <div data-role="content" style="">
             <h1>Willkommen in unserer neuen App!</h1>
@@ -83,113 +60,19 @@
         </div>
     </div>
 
-    <!-- Adressbuch Page -->
-    <div data-role="page" id="adressbuch" data-theme="a">
+    <div data-role="page" id="test" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#startseite" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
-            <a href="#adressbuch" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Adressbuch</a>
-            <a href="#arbeitszeit" class="btn-primary" data-role="button" id="timerButton" data-icon="">Arbeitszeit stoppen</a>
-            <a href="#menu-panel" data-role="button" class="close" data-icon="remove">Schließen</a>
+            <a href="#startseite" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
+            <a href="#test" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">test</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
-            <div class="logo">GFI <span class="logo-highlight">A</span>pp</div>
+            <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
         </div>
         <div data-role="content" style="">
-            <input type="text" id="namennummersearchInput" placeholder="Nach Namen oder Nummern suchen" title="Geben Sie einen Namen ein">
-            <button id="sucheButton">Suchen</button>
-            <br /><br /><hr />
-            <input type="text" id="searchInput" onkeyup="tableSearch()" placeholder="Nach Firma suchen" title="Geben Sie einen Namen ein">
-            <table id="telefonbuch">
-                <thead>
-                    <tr>
-                        <th>Firma</th>
-                        <th>Ort</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr></tr>
-                </tbody>
-            </table>
+            <h1>das is die test seite</h1>
+            <div id="welcomeText"></div>
         </div>
-    </div>
-
-
-    <!-- Arbeitszeit Page -->
-    <div data-role="page" id="arbeitszeit" data-theme="a">
-        <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#startseite" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
-            <a href="#adressbuch" class="btn-primary" data-role="button" id="timerButton" data-icon="">Adressbuch</a>
-            <a href="#arbeitszeit" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Arbeitszeit stoppen</a>
-            <a href="#menu-panel" data-role="button" class="close" data-icon="remove">Schließen</a>
-        </div>
-        <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
-            <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
-            <div class="logo">GFI <span class="logo-highlight">A</span>pp</div>
-        </div>
-        <div data-role="content">
-            <h1>Arbeitszeit stoppen</h1>
-            <div>
-                <div id="timer">0.00</div><br />
-                <div id="timerInfo"></div>
-
-                <div class="btn-group">
-                    <button id="stopstart">Start / Stop</button>
-                    <button id="lapreset">Zurücksetzen</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Anmelden Page -->
-    <div data-role="page" id="login" data-theme="a">
-        <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#menu-panel" data-role="button" class="close" data-icon="remove">Keine Zugriffsrechte</a>
-        </div>
-        <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
-            <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
-            <div class="logo">GFI <span class="logo-highlight">A</span>pp</div>
-        </div>
-        <div data-role="content">
-            <h1>Login</h1>
-            <div>
-                <input type="text" id="loginPasswort" name="passwort" placeholder="Login Passwort">
-
-                <div class="btn-group">
-                    <button id="loginButton">Anmelden</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Info Dialog -->
-    <div data-role="dialog" id="info-dialog" data-theme="a">
-        <div data-role="content">
-            <h1><img style="float: left;" src="res/icon/android/mdpi.png" />Genaue Info</h1>
-            <p id="selectInfos"></p>
-            <a href="#" data-role="button" data-rel="back" data-icon="remove">Zurück</a>
-        </div>
-        <div data-role="footer"></div>
-    </div>
-
-    <!-- Suche Dialog -->
-    <div data-role="dialog" id="suche-dialog" data-theme="a">
-        <div data-role="content">
-            <h1><img style="float: left;" src="res/icon/android/mdpi.png" />Suchergebnisse</h1>
-            <p id="searchResults"></p>
-            <a href="#" data-role="button" data-rel="back" data-icon="remove">Zurück</a>
-        </div>
-        <div data-role="footer"></div>
-    </div>
-
-    <!-- Error Dialog -->
-    <div data-role="dialog" id="error-dialog" data-theme="a">
-        <div data-role="content">
-            <h1><img style="float: left;" src="res/icon/android/mdpi.png" />Fehler</h1>
-            <p id="errorInfos"></p>
-            <a href="#" data-role="button" data-rel="back" data-icon="remove">Verstanden</a>
-        </div>
-        <div data-role="footer"></div>
     </div>
 </body>
 </html>
