@@ -14,10 +14,17 @@
     "license": "Apache-2.0",
     "cordova": {
         "plugins": {
-            "cordova-plugin-whitelist": {}
-        }
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-device": {}
+        },
+        "platforms": [
+            "android"
+        ]
     },
     "dependencies": {
-        "cordova-plugin-whitelist": "1"
+        "cordova-android": "^8.0.0",
+        "cordova-plugin-device": "^2.0.2",
+        "cordova-plugin-whitelist": "1",
+        "device": "^0.3.9"
     }
 }
