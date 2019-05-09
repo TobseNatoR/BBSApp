@@ -58,7 +58,7 @@
 
     <div data-role="page" id="register" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="lock">Kein Zugriff</a>
+            <a href="#" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="remove">Kein Zugriff</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
@@ -71,13 +71,13 @@
             <input type="text" id="nickname" placeholder="Nutzername" />
             <input type="password" id="password" placeholder="Passwort" />
             <input type="password" id="password1" placeholder="Passwort wiederholen" />
-            <input type="button" id="register" value="Registieren" />
+            <input type="button" id="registerbutton" value="Registieren" />
         </div>
     </div>
 </body>
 </html>
 
 <script src="js/mainController.js"></script>
-<script src="js/passwortController.js"></script>
+<script src="password/passwordController.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
