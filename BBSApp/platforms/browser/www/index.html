@@ -66,12 +66,18 @@
         </div>
         <div data-role="content" style="">
             <h1>Du bist nicht registriert</h1>
-            <div id="welcomeText"></div>
+            <div>Guten Tag,<br />Du kannst dich nun hier registieren.</div><br />
+            <input type="email" id="email" placeholder="E-Mail Adresse" />
+            <input type="text" id="nickname" placeholder="Nutzername" />
+            <input type="password" id="password" placeholder="Passwort" />
+            <input type="password" id="password1" placeholder="Passwort wiederholen" />
+            <input type="button" id="register" value="Registieren" />
         </div>
     </div>
 </body>
 </html>
 
-<script src="js/Controller.js"></script>
+<script src="js/mainController.js"></script>
+<script src="js/passwortController.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>

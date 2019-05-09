@@ -26,11 +26,7 @@ function loadAppData()
             window.location.href = "#register";
         }
 
-        console.log(device.serial);
-        console.log(device.uuid);
-        console.log(device.model);
-
-        console.log("fertig");
+        
     });
 }
 
@@ -38,3 +34,21 @@ function registerUser()
 {
 
 }
+
+(function ()
+{
+    "use strict";
+
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+
+
+    function onDeviceReady()
+    {
+
+        $("#register").click(function ()
+        {
+            alert("geht");
+        });
+
+    };
+})();
