@@ -2,7 +2,7 @@
 
 # Datenbank
 
-https://strawberry-rp.de/phpmyadmin
+> Link zu phpmyadmin https://strawberry-rp.de/phpmyadmin
 
 Nutzername: SchulApp
 
