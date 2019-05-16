@@ -44,6 +44,7 @@
     <div data-role="page" id="startseite" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
             <a href="#startseite" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
+            <a href="#password" class="btn-primary" data-role="button" id="timerButton" data-icon="">Passwortspeicher</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
@@ -73,6 +74,43 @@
             <input type="button" id="registerbutton" value="Registieren" />
         </div>
     </div>
+
+
+    <!--Passwort Safe------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <div data-role="page" id="password" data-theme="a">
+        <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
+            <a href="#startseite" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
+            <a href="#password" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Passwortspeicher</a>
+        </div>
+        <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
+            <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
+            <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
+        </div>
+        <div data-role="content" style="">
+            <h1>Dein Passwortspeicher</h1>
+            <table>
+                <thead>Passwort Sammlung</thead>
+                <tbody>
+                    <tr>
+                        <td onclick="test()">Passwort Hinzufügen</td>
+                    </tr>
+                    <tr>
+                        <td onclick="" style="background-color:lightgrey;">Passwörter Einsehen</td>
+                    </tr>
+                    <tr>
+                        <td onclick="">Passwort Generieren</td>
+                    </tr>
+                    <tr>
+                        <td onclick="" style="background-color:lightgrey;">Passwort Sicherheit prüfen</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="welcomeText"></div>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
 

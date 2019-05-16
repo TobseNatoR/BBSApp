@@ -13,7 +13,8 @@ function loadAppData()
         $.each(result, function (i, field)
         {
             if (field.model == device.model && field.uuid == device.uuid && field.serial == device.serial)
-            {         
+            {
+                window.localStorage.setItem('id', field.id);
                 registered = true;
             }
         });
