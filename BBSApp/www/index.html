@@ -92,10 +92,10 @@
                 <thead>Passwort Sammlung</thead>
                 <tbody>
                     <tr>
-                        <td onclick="test()">Passwort Hinzufügen</td>
+                        <td onclick="PASSWORD.CreatePW.CreatePasswortObj()">Passwort Hinzufügen</td>
                     </tr>
                     <tr>
-                        <td onclick="" style="background-color:lightgrey;">Passwörter Einsehen</td>
+                        <td onclick="PASSWORD.PWList.getlist()" style="background-color:lightgrey;">Passwörter Einsehen</td>
                     </tr>
                     <tr>
                         <td onclick="">Passwort Generieren</td>
@@ -115,6 +115,7 @@
 </html>
 
 <script src="js/mainController.js"></script>
+<script src="password/script.js"></script>
 <script src="password/passwordController.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
