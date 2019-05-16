@@ -13,4 +13,4 @@ Passwort: 2qZlHxDGqOIZ6tnq
 
 Um Passwörter einzutragen
 
-https://filebase.strawberry-rp.de/app/send/passwordController.php?**uid=&description=&password=**
+https://filebase.strawberry-rp.de/app/send/passwordController.php?uid=&description=&password=
