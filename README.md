@@ -1,6 +1,6 @@
-# BBSApp
+## BBSApp
 
-**Datenbank**
+# Datenbank
 
 https://strawberry-rp.de/phpmyadmin
 
@@ -9,9 +9,7 @@ Nutzername: SchulApp
 Passwort: 2qZlHxDGqOIZ6tnq
 
 
-
-
-**PHP Controller**
+# PHP Controller
 
 Um Passwörter einzutragen
 
