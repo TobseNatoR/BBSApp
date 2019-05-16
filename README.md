@@ -4,9 +4,7 @@
 
 > Link zu phpmyadmin https://strawberry-rp.de/phpmyadmin
 
-Nutzername: SchulApp
-
-Passwort: 2qZlHxDGqOIZ6tnq
+**Nutzername:Passwort:** SchulApp:2qZlHxDGqOIZ6tnq
 
 
 # PHP Controller
