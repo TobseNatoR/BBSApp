@@ -58,7 +58,7 @@
 
     <div data-role="page" id="register" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="lock">Kein Zugriff</a>
+            <a href="#" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="remove">Kein Zugriff</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
@@ -66,7 +66,12 @@
         </div>
         <div data-role="content" style="">
             <h1>Du bist nicht registriert</h1>
-            <div id="welcomeText"></div>
+            <div>Guten Tag,<br />Du kannst dich nun hier registieren.</div><br />
+            <input type="email" id="email" placeholder="E-Mail Adresse" />
+            <input type="text" id="nickname" placeholder="Nutzername" />
+            <input type="password" id="password" placeholder="Passwort" />
+            <input type="password" id="password1" placeholder="Passwort wiederholen" />
+            <input type="button" id="registerbutton" value="Registieren" />
         </div>
     </div>
 </body>
