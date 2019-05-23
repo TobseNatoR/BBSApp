@@ -1,7 +1,8 @@
 ﻿var PASSWORD = PASSWORD || {};
-var PwObject = PwObject || {};
+var PwObject = new pwList || {};
+var PwList = Array() || {};
 
-PASSWORD.CreatePW = {
+PASSWORD = {
 
     CreatePasswortObj: function test() {
         let Plattform;
@@ -32,24 +33,50 @@ PASSWORD.CreatePW = {
 
         function setPassword(password) {
             Password = password;
-            
-            PwObject = new pwList(Password.input1, Plattform.input1);
-            console.log(PwObject);
+
+            PwObject = { password: Password.input1, plattform: Plattform.input1, index: PwList.length };
+            PwList.push(PwObject);
         }
         
+    },
+    GetPasswortList: function showPwList() {
+
+        var PwFormatted = '';
+
+        for (var i = 0; i < PwList.length; i++) {
+
+            PwFormatted += "Plattform: " + PwList[i].plattform + "\nPasswort: " + PwList[i].password + "\n\n";
+        }
+       
+        navigator.notification.alert(
+            PwFormatted,  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+
+        function alertDismissed() {
+            // do something
+        }
+
+        console.log('ende');
+    },
+    CreateRandomPw: function create() {
+
+
+
+
+        console.log('randompasswort')
+    },
+    TestPasswort: function test() {
+
+        console.log('test');
     }
 };
 
-PASSWORD.PWList = {
-    
-    getlist() {
-    }
-};
 
-function pwList(param1, param2) {
-    var plattform = param1;
-    var password = param2;
-    var index = '0';
-
-    console.log(plattform, password);
+function pwList() {
+    var plattform;
+    var password;
+    var index;
 }
