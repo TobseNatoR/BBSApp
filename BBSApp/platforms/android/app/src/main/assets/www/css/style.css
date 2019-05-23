@@ -4457,6 +4457,12 @@ a [class*=" icon-"] {
 	margin-left: 2px
 }
 
+.ui-icon-lock-left:before {
+    content: "\f023";
+    margin-top: 1px;
+    margin-left: 2px
+}
+
 .ui-icon-share-alt:before {
 	content: "\f064";
 	margin-top: 2px;
@@ -4473,8 +4479,7 @@ a [class*=" icon-"] {
 	content: "\f0c9"
 }
 
-.ui-icon-envelope-alt:before {
-	content: "\f0e0";
+.fa fa-lock:before {
 	margin-top: 2px;
 	margin-left: 2px
 }
