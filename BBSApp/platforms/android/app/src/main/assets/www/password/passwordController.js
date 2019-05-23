@@ -1,12 +1,11 @@
 ﻿var PASSWORD = PASSWORD || {};
+var PwObject = PwObject || {};
 
 PASSWORD.CreatePW = {
 
     CreatePasswortObj: function test() {
         let Plattform;
         let Password;
-        let PwObject = [];
-        console.log('h');
 
         navigator.notification.prompt(
             'z.B: Facebook, Spotify',
@@ -32,10 +31,9 @@ PASSWORD.CreatePW = {
         }
 
         function setPassword(password) {
-            console.log(password.input1);
             Password = password;
             
-            var PwObject = new pwList(Password.input1, Plattform.input1);
+            PwObject = new pwList(Password.input1, Plattform.input1);
             console.log(PwObject);
         }
         
