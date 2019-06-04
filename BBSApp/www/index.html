@@ -101,16 +101,16 @@
                 <thead>Passwort Sammlung</thead>
                 <tbody>
                     <tr>
-                        <td onclick="PASSWORD.CreatePW.CreatePasswortObj()">Passwort Hinzufügen</td>
+                        <td onclick="PASSWORD.CreatePasswortObj()">Passwort Hinzufügen</td>
                     </tr>
                     <tr>
-                        <td onclick="PASSWORD.PWList.getlist()" style="background-color:lightgrey;">Passwörter Einsehen</td>
+                        <td onclick="PASSWORD.GetPasswortList()" style="background-color:lightgrey;">Passwörter Einsehen</td>
                     </tr>
                     <tr>
-                        <td onclick="">Passwort Generieren</td>
+                        <td onclick="PASSWORD.CreateRandomPw()">Passwort Generieren</td>
                     </tr>
                     <tr>
-                        <td onclick="" style="background-color:lightgrey;">Passwort Sicherheit prüfen</td>
+                        <td onclick="PASSWORD.TestPasswort()" style="background-color:lightgrey;">Passwort Sicherheit prüfen</td>
                     </tr>
                 </tbody>
             </table>
