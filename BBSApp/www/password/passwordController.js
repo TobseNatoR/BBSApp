@@ -1,13 +1,17 @@
-﻿var PASSWORD = PASSWORD || {};
+﻿// Global Variablen erstellen
+var PASSWORD = PASSWORD || {};
 var PwObject = new pwList || {};
 var PwList = Array() || {};
 
+//Namespace
 PASSWORD = {
-
+    //Klasse
     CreatePasswortObj: function test() {
         let Plattform;
         let Password;
 
+
+        //wird automatisch aufgerufen eine art methode
         navigator.notification.prompt(
             'z.B: Facebook, Spotify',
             setPlattform,
@@ -15,9 +19,8 @@ PASSWORD = {
             ['Weiter', 'Abbrechen'],
             ''
         );
-
+        //Methode 
         function setPlattform(plattform) {
-            console.log(plattform.input1);
             Plattform = plattform;
 
             if (plattform.input1 != null) {
@@ -30,7 +33,7 @@ PASSWORD = {
                 );
             }
         }
-
+        //Methode
         function setPassword(password) {
             Password = password;
 
@@ -39,6 +42,7 @@ PASSWORD = {
         }
         
     },
+    //Klasse
     GetPasswortList: function showPwList() {
 
         var PwFormatted = '';
@@ -49,25 +53,25 @@ PASSWORD = {
         }
        
         navigator.notification.alert(
-            PwFormatted,  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
+            PwFormatted,
+            alertDismissed,         
+            'Ein Fehler',            
+            'Ok'                  
         );
 
         function alertDismissed() {
             // do something
         }
-
-        console.log('ende');
     },
+    //Klasse unvollständig
     CreateRandomPw: function create() {
 
 
 
 
-        console.log('randompasswort')
+        console.log('randompasswort');
     },
+    //Klasse unvollständig
     TestPasswort: function test() {
 
         console.log('test');
