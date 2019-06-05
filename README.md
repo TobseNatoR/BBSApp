@@ -14,6 +14,8 @@
 **Senden INSERT** Device Daten https://filebase.strawberry-rp.de/app/send/authenticationController.php?model=&serial=&uuid=&email=&username=&password=
 
 > Action=1 ist INSERT, Action=2 ist DELETE
+
+
 **Senden INSERT** Finanz Daten https://filebase.strawberry-rp.de/app/send/financeController.php?action=&uid=&type=&description=&value=
 
 **Senden DELETE** Finanz Daten https://filebase.strawberry-rp.de/app/send/financeController.php?action=&id=&uid=
