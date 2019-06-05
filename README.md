@@ -1,4 +1,4 @@
-## BBSApp
+## Finanz Expert
 
 # Datenbank
 
