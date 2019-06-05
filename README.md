@@ -13,7 +13,7 @@
 
 **Senden** Device Daten https://filebase.strawberry-rp.de/app/send/authenticationController.php?model=&serial=&uuid=&email=&username=&password=
 
-**Senden** Finanz Daten https://filebase.strawberry-rp.de/app/send/financeController.php?uid=<NUTZER ID>&type=<1 = Einnahmen, 2 = Ausgaben>&value=<MENGE>
+**Senden** Finanz Daten https://filebase.strawberry-rp.de/app/send/financeController.php?uid=&type=&value=
 
 **Empfangen** App User https://filebase.strawberry-rp.de/app/get/authenticationController.php
 
