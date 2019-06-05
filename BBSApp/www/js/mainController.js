@@ -1,10 +1,19 @@
 ﻿//Globale variablen
 var registered = false;
+var PathURL = "file:///data/user/0/com.adobe.phonegap.app/files/phonegapdevapp/www/index.html";
 
 //App wird initialisiert
 function initJava()
 {
     loadAppData();
+}
+
+window.onhashchange = function ()
+{
+    if (window.location.href == PathURL + "#finanzen")
+    {
+        loadFinances();
+    }
 }
 
 //App Daten werden aus der MySQL Datenbank abgerufen
@@ -20,6 +29,7 @@ function loadAppData()
                 //Lokal wird dei Eindeutige ID aus der Datenbank gespeichert
                 window.localStorage.setItem('id', field.id);
                 registered = true;
+                loadFinances();
             }
         });
     });
@@ -32,8 +42,6 @@ function loadAppData()
         {
             window.location.href = "#register";
         }
-
-        
     });
 }
 
@@ -50,6 +58,7 @@ function registerUser(email, username, password, password1)
     xmlReq.send(str);
 
     registered = true;
+    loadAppData();
     window.location.href = "#startseite";
 }
 
