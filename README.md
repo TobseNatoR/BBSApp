@@ -14,3 +14,5 @@
 **Senden** Device Daten https://filebase.strawberry-rp.de/app/send/authenticationController.php?model=&serial=&uuid=&email=&username=&password=
 
 **Empfangen** App User https://filebase.strawberry-rp.de/app/get/authenticationController.php
+
+**Empfangen** Passwort Daten https://filebase.strawberry-rp.de/app/get/passwordController.php
