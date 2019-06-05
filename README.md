@@ -18,3 +18,5 @@
 **Empfangen** App User https://filebase.strawberry-rp.de/app/get/authenticationController.php
 
 **Empfangen** Passwort Daten https://filebase.strawberry-rp.de/app/get/passwordController.php
+
+**Empfangen** Finanz Daten https://filebase.strawberry-rp.de/app/get/financeController.php
