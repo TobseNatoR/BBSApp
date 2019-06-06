@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <title></title>
@@ -52,22 +51,23 @@
     <!-- Startseite Page -->
     <div data-role="page" id="startseite" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#startseite" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon=""><i class="fa fa-home"></i> Startseite</a>
-            <a href="#password" class="btn-primary" data-role="button" id="timerButton" data-icon=""><i class="fa fa-lock"></i> Passwortspeicher</a>
+            <a href="#startseite" style="border: 1px solid black;" class="btn-primary" data-role="button"><i class="fa fa-home"></i> Startseite</a>
+            <a href="#finanzen" class="btn-primary" data-role="button"><i class="fa fa-money"></i> Finanzen</a>
+            <a href="#password" class="btn-primary" data-role="button" id="timerButton"><i class="fa fa-lock"></i> Passwortspeicher</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
             <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
         </div>
         <div data-role="content" style="">
-            <h1>Willkommen in unserer neuen App!</h1>
-            <div id="welcomeText"></div>
+            <h1>Willkommen bei Finanz Expert!</h1>
+            <div id="welcomeText">Mit einem Wisch nach links kannst du die Navigation öffnen.</div>
         </div>
     </div>
 
     <div data-role="page" id="register" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="remove">Kein Zugriff</a>
+            <a href="#" style="border: 1px solid black;" class="btn-primary" data-role="button" data-icon="remove">Kein Zugriff</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
@@ -85,46 +85,118 @@
     </div>
 
 
-    <!--Passwort Safe------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <!-- | Passwortspeicher | ----------------------------------------------------------------------------------------->
     <div data-role="page" id="password" data-theme="a">
         <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
-            <a href="#startseite" class="btn-primary" data-role="button" id="timerButton" data-icon="">Startseite</a>
-            <a href="#password" style="border: 1px solid black;" class="btn-primary" data-role="button" id="timerButton" data-icon="">Passwortspeicher</a>
+            <a href="#startseite" class="btn-primary" data-role="button"><i class="fa fa-home"></i> Startseite</a>
+            <a href="#finanzen" class="btn-primary" data-role="button"><i class="fa fa-money"></i> Finanzen</a>
+            <a href="#password" style="border: 1px solid black;" class="btn-primary" data-role="button"><i class="fa fa-lock"></i> Passwortspeicher</a>
         </div>
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
             <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
         </div>
+
         <div data-role="content" style="">
             <h1>Dein Passwortspeicher</h1>
-            <table>
-                <thead>Passwort Sammlung</thead>
-                <tbody>
-                    <tr>
-                        <td onclick="PASSWORD.CreatePasswortObj()">Passwort Hinzufügen</td>
-                    </tr>
-                    <tr>
-                        <td onclick="PASSWORD.GetPasswortList()" style="background-color:lightgrey;">Passwörter Einsehen</td>
-                    </tr>
-                    <tr>
-                        <td onclick="PASSWORD.CreateRandomPw()">Passwort Generieren</td>
-                    </tr>
-                    <tr>
-                        <td onclick="PASSWORD.TestPasswort()" style="background-color:lightgrey;">Passwort Sicherheit prüfen</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <button onclick="PASSWORD.CreatePasswortObj()">Passwort Hinzufügen</button>
+
+            <a href="#passwordList" data-role="button">Passwörter Einsehen</a>
+
+            <button onclick="PASSWORD.TestPasswort()">Passwort sicherheit</button>
+
             <div id="welcomeText"></div>
         </div>
     </div>
 
 
+    <div data-role="page" id="passwordList" data-theme="a">
 
+        <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
+            <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
+        </div>
+        <div data-role="content" style="">
+            <h1>Passwörter</h1>
+            <script>
+                document.write("<table><tr><th>Plattform</th><th>Passwort</th></tr>");
+
+                for (var x = 0; x < 3; x++) {//PwList[i].plattform
+                    document.write("<tr><td>" + "</td><td>" + "</td></tr>");
+                }
+                document.write("</table>");
+            </script>
+            <a valign="bottom" href="#password" class="btn-primary" data-role="button"> Zurück</a>
+        </div>
+    </div>
+
+    <!-- | Finanzen | ----------------------------------------------------------------------------------------->
+    <div data-role="page" id="finanzen" data-theme="a">
+        <div data-role="panel" data-display="overlay" id="menu-panel" class="right-panel" data-position="right">
+            <a href="#startseite" class="btn-primary" data-role="button"><i class="fa fa-home"></i> Startseite</a>
+            <a href="#finanzen" style="border: 1px solid black;" class="btn-primary" data-role="button"><i class="fa fa-money"></i> Finanzen</a>
+            <a href="#password" class="btn-primary" data-role="button"><i class="fa fa-lock"></i> Passwortspeicher</a>
+        </div>
+        <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
+            <a href="#menu-panel" class="menu"><span class="ui-icon-reorder"></span></a>
+            <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
+        </div>
+
+        <div data-role="content" style="">
+            <h1>Deine Finanzen</h1>
+
+            <div style="width:160px; float:left; font-size: 20px;">Einnahmen: </div><div id="einnahmen_insgesamt"></div>
+            <div style="width:160px; float:left; font-size: 20px;">Ausgaben: </div><div id="ausgaben_insgesamt"></div>
+            <div style="width:160px; float:left; font-size: 20px;">Differenz: </div><div id="differenz"></div>
+            <br><br><br><br><br><br>
+            <a href="javascript: einnahmen_hinzufügen()" style="text-decoration: none; font-weight: bold;"><i class="fa fa-plus"></i> Einnahmen hinzufügen</a><br />
+            <a href="javascript: ausgaben_hinzufügen()" style="text-decoration: none; font-weight: bold;"><i class="fa fa-minus"></i> Ausgaben hinzufügen</a><br /><br />
+            <a style="text-decoration: none;"><i class="fa fa-info"></i> Info: Tippe auf deine Ausgaben / Einnahmen um sie zu löschen</a>
+            <br /><br />
+
+            <table id="einnahmen">
+                <thead>Einnahmen</thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+
+            <br /><br /><br />
+            <table id="ausgaben">
+                <thead>Ausgaben</thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
 
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+
 <script src="js/mainController.js"></script>
-<script src="password/script.js"></script>
 <script src="password/passwordController.js"></script>
+<script src="finances/financesController.js"></script>
 <script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>

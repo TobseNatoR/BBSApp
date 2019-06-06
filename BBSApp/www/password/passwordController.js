@@ -62,15 +62,7 @@ PASSWORD = {
         function alertDismissed() {
             // do something
         }
-    },
-    //Klasse unvollständig
-    CreateRandomPw: function create() {
-
-
-
-
-        console.log('randompasswort');
-    },
+    },   
     //Klasse unvollständig
     TestPasswort: function test() {
 
