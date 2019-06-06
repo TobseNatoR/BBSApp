@@ -5,8 +5,7 @@
 > Link zu phpmyadmin https://strawberry-rp.de/phpmyadmin
 
 **Nutzername:Passwort:** SchulApp:2qZlHxDGqOIZ6tnq
-
-
+<br/><br/><hr>
 
 **02.05.2019** 
 - [x] Start (Überlegung was wir machen wollen)
@@ -25,7 +24,7 @@
 - [ ] Sicherheitsrelevante überarbeitungen
 - [x] Ende
 
-
+<br/><hr>
 
 # PHP Controller
 
