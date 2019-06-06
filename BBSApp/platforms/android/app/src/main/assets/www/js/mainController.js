@@ -12,7 +12,7 @@ window.onhashchange = function ()
 {
     if (window.location.href == PathURL + "#finanzen")
     {
-        loadFinances();
+        loadFinances();   
     }
 }
 
