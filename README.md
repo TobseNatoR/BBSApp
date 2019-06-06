@@ -6,6 +6,24 @@
 
 **Nutzername:Passwort:** SchulApp:2qZlHxDGqOIZ6tnq
 
+**02.05.2019** 
+- [x] Start (Überlegung was wir machen wollen)
+
+**bis 07.05.2019** 
+- [x] Workspace einrichten
+
+**bis 09.05.2019**
+- [x] Register Formular fertigstellen
+
+**bis 23.05.2019**
+- [x] Passwortsafe fertigstellen
+- [x] Finanzverwaltung fertigstellen
+
+**bis 01.06.2019**
+- [ ] Sicherheitsrelevante überarbeitungen
+- [x] Ende
+
+
 
 # PHP Controller
 
