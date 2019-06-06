@@ -10,22 +10,16 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="js/jquery-1.10.2.min.js"></script>
     <script>
-        $(document).bind("mobileinit", function ()
-        {
+        $(document).bind("mobileinit", function () {
             $.mobile.defaultPageTransition = 'none';
         });
-        $(document).on("pageinit", ".ui-page", function ()
-        {
+        $(document).on("pageinit", ".ui-page", function () {
             var $page = $(this);
-            $page.on("swipeleft swiperight", function (e)
-            {
-                if ($page.jqmData("panel") !== "open")
-                {
-                    if (e.type === "swipeleft")
-                    {
+            $page.on("swipeleft swiperight", function (e) {
+                if ($page.jqmData("panel") !== "open") {
+                    if (e.type === "swipeleft") {
                         $page.find(".right-panel").panel("open");
-                    } else if (e.type === "swiperight")
-                    {
+                    } else if (e.type === "swiperight") {
                         $page.find(".left-panel").panel("open");
                     }
                 }
@@ -34,13 +28,11 @@
 
 
         //Diese Funktion wird aufgerufen wenn unsere APP gestartet wird
-        function onLoad()
-        {
+        function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        function onDeviceReady()
-        {
+        function onDeviceReady() {
             initJava();
         }
     </script>
@@ -102,9 +94,9 @@
 
             <button onclick="PASSWORD.CreatePasswortObj()">Passwort Hinzufügen</button>
 
-            <a href="#passwordList" data-role="button">Passwörter Einsehen</a>
+            <a onclick="tst()" href="#passwordList" data-role="button">Passwörter Einsehen</a>
 
-            <button onclick="PASSWORD.TestPasswort()">Passwort sicherheit</button>
+            <button onclick="tst()">Passwort sicherheit</button>
 
             <div id="welcomeText"></div>
         </div>
@@ -116,17 +108,22 @@
         <div data-role="header" class="custom-header" data-tap-toggle="false" data-id="header">
             <div class="logo">Finanz <span class="logo-highlight">E</span>xpert</div>
         </div>
-        <div data-role="content" style="">
+        <div data-role="content">
             <h1>Passwörter</h1>
             <script>
-                document.write("<table><tr><th>Plattform</th><th>Passwort</th></tr>");
+                function tst() {
+                    var test = PASSWORD.GetPasswortList();
+                    document.write("<table><tr><th>Plattform</th><th>Passwort</th></tr>");
 
-                for (var x = 0; x < 3; x++) {//PwList[i].plattform
-                    document.write("<tr><td>" + "</td><td>" + "</td></tr>");
-                }
-                document.write("</table>");
+
+                    for (var x = 0; x < 3; x++) {
+                        document.write("<tr><td>" + test[x].plattform + "</td><td>" + test[x].password + "</td></tr>");
+                    }
+                    document.write("</table>");
+                }                
+
             </script>
-            <a valign="bottom" href="#password" class="btn-primary" data-role="button"> Zurück</a>
+            <a href="#password"> Zurück</a>
         </div>
     </div>
 
@@ -172,28 +169,6 @@
     </div>
 </body>
 </html>
-
-
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th, td {
-        text-align: left;
-        padding: 8px;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2
-    }
-
-    th {
-        background-color: #4CAF50;
-        color: white;
-    }
-</style>
 
 <script src="js/mainController.js"></script>
 <script src="password/passwordController.js"></script>

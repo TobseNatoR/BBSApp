@@ -5,7 +5,7 @@ var PwList = Array() || {};
 
 //Namespace
 PASSWORD = {
-    //Klasse
+    //Methode
     CreatePasswortObj: function test() {
         let Plattform;
         let Password;
@@ -39,35 +39,36 @@ PASSWORD = {
 
             PwObject = { password: Password.input1, plattform: Plattform.input1, index: PwList.length };
             PwList.push(PwObject);
-        }
-        
+        }        
     },
     //Klasse
     GetPasswortList: function showPwList() {
+        console.log(PwList);
+    return PwList;
 
-        var PwFormatted = '';
+        //var PwFormatted = '';
 
-        for (var i = 0; i < PwList.length; i++) {
+        //for (var i = 0; i < PwList.length; i++) {
 
-            PwFormatted += "Plattform: " + PwList[i].plattform + "\nPasswort: " + PwList[i].password + "\n\n";
-        }
+        //    PwFormatted += "Plattform: " + PwList[i].plattform + "\nPasswort: " + PwList[i].password + "\n\n";
+        //}
        
-        navigator.notification.alert(
-            PwFormatted,
-            alertDismissed,         
-            'Ein Fehler',            
-            'Ok'                  
-        );
+        //navigator.notification.alert(
+        //    PwFormatted,
+        //    alertDismissed,         
+        //    'Ein Fehler',            
+        //    'Ok'                  
+        //);
 
-        function alertDismissed() {
-            // do something
-        }
+        //function alertDismissed() {
+        //    // do something
+        //}
     },   
     //Klasse unvollständig
-    TestPasswort: function test() {
-
-        console.log('test');
-    }
+    //TestPasswort: function test() {
+    //    console.log(PwList);
+    //    console.log('test');
+    //}
 };
 
 
